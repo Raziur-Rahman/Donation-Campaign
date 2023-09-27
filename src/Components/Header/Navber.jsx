@@ -4,8 +4,9 @@ import { Link, NavLink } from "react-router-dom";
 const Navber = () => {
     return (
         <div>
-            <nav className="px-32 py-2">
-                <div className="flex items-center ">
+            {/* <div className="hero-overlay bg-opacity-60"></div> */}
+            <nav className="px-32 py-2 z-50">
+                <div className="flex justify-between items-center ">
                     <div className="flex-1">
                         <Link to={'/'}><img src={'https://i.ibb.co/N9M0kxJ/Logo.png'} alt="" /></Link>
                     </div>
@@ -38,26 +39,6 @@ const Navber = () => {
                     </div>
                 </div>
             </nav>
-            <div className="hero " style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div >
-                        <h1 className="mb-5 text-5xl font-bold">I Grow By Helping People In Need</h1>
-                        <div>
-                            <div className="join">
-                                <div>
-                                    <div>
-                                        <input className="input input-bordered join-item md:w-80" placeholder="Search here..." />
-                                    </div>
-                                </div>
-                                <div className="indicator">
-                                    <button className="btn join-item bg-[#FF444A] border-none text-white hover:bg-amber-500">Search</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
     );
