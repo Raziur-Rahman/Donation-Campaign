@@ -11,7 +11,7 @@ const Bannar = () => {
                         <div>
                             <div className="join">
                                 <div>
-                                    <input className="input input-bordered join-item md:w-80" placeholder="Search here..." />
+                                    <input className="input input-bordered join-item md:w-80 text-black font-semibold" placeholder="Search here..." />
                                 </div>
                                 <div className="indicator">
                                     <button className="btn join-item bg-[#FF444A] border-none text-white hover:bg-amber-500">Search</button>

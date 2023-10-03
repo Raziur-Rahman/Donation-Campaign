@@ -1,6 +1,8 @@
 
 
 const Statistics = () => {
+    
+
     return (
         <div>
             this is from statistics

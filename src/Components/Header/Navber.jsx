@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navber = () => {
     return (
         <div >
-            <nav className=" md:px-10 lg:px-32 py-2">
+            <nav className=" md:px-10 lg:px-8 xl:px-32 py-2">
                 <div className="flex flex-col md:flex-row justify-between items-center ">
                     <div className="flex-1">
                         <Link to={'/'}><img src={'https://i.ibb.co/N9M0kxJ/Logo.png'} alt="" /></Link>

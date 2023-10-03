@@ -13,7 +13,7 @@ const HomeCard = ({ data }) => {
                     <figure><img src={Image[0]} alt="Image..." /></figure>
                     <div className=" p-4" style={{ color: CategoryTextColor }}>
                         <a className="px-4 py-1 rounded-md font-semibold" style={{ backgroundColor: Card_B_Bg }}>{Category}</a>
-                        <h2 className="text-2xl mt-5">{Title}</h2>
+                        <h2 className="text-xl font-semibold mt-5">{Title}</h2>
 
                     </div>
                 </div>
