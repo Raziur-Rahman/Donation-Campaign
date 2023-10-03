@@ -1,11 +1,12 @@
 
 
 const Statistics = () => {
-    
+
+
 
     return (
         <div>
-            this is from statistics
+            Stats will show hare
             
         </div>
     );

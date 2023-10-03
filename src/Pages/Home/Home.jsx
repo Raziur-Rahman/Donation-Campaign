@@ -3,22 +3,56 @@
 import { useLoaderData } from "react-router-dom";
 import Bannar from "../../Components/Bannar/Bannar";
 import HomeCard from "../../Components/HomeCard/HomeCard";
+import { createContext, useEffect, useState } from "react";
+
+export const SearchContext = createContext('');
 
 
 const Home = () => {
 
+    const [searchValue, setSearchValue] = useState('');
+    const [showData, setShowData] = useState([]);
+    const [found, setFound] =useState(true);
+
     const data = useLoaderData();
-    // console.log(data);
+
+    useEffect(()=>{
+        if(searchValue === ""){
+            setShowData(data);
+
+        }
+        else{
+            const temp = data.filter(item => item.Category === searchValue);
+            if(temp.length > 0){
+                setShowData(temp);
+                setFound(true)
+
+            }
+            else{
+                setFound(false);
+            }
+            
+        }
+    },[searchValue,data])
+
+
+    // console.log(searchValue);
 
     return (
         <div>
-            <Bannar></Bannar>
-            <div className="px-4 md:px-10 lg:px-5 xl:px-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center my-10">
-                {
-                    data.map(data => <HomeCard key={data.ID} data={data}></HomeCard>)
-                }
+            <SearchContext.Provider value={[searchValue, setSearchValue]}>
+                <Bannar></Bannar>
+                <div >
+                    {
+                        found ? <div className="px-4 md:px-10 lg:px-5 xl:px-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center my-10">{
+                            showData.map(data => <HomeCard key={data.ID} data={data}></HomeCard>)
+                        }</div>
+                        : <p className="text-4xl flex justify-center items-center h-[20vh]">No data found for this Category</p>
+                    }
 
-            </div>
+                </div>
+            </SearchContext.Provider>
+
 
         </div>
     );

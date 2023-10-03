@@ -17,7 +17,7 @@ const Donation = () => {
             setNoFounds('No Data Found')
             setBtnState(!btnState)
         }
-    }, [])
+    }, [btnState])
 
     return (
         <div className="my-10">

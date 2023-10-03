@@ -1,6 +1,27 @@
+import { useContext } from "react";
+import { SearchContext } from "../../Pages/Home/Home";
 
 
 const Bannar = () => {
+
+    const [searchValue , setSearchValue] = useContext(SearchContext);
+
+    const handleSearch = () => {
+        const searchField = document.getElementById("inputField");
+        const inputText = searchField.value;
+        if (inputText === '') {
+            setSearchValue(searchValue);
+        }
+        else {
+            setSearchValue(inputText);
+            searchField.value = ''
+        }
+
+    }
+
+    // console.log(searchValue);
+
+
     return (
         <div>
             <div className="hero h-[500px] bg-cover " style={{ backgroundImage: 'url(https://i.ibb.co/9tP6ZS1/bg-image.jpg)' }}>
@@ -11,10 +32,10 @@ const Bannar = () => {
                         <div>
                             <div className="join">
                                 <div>
-                                    <input className="input input-bordered join-item md:w-80 text-black font-semibold" placeholder="Search here..." />
+                                    <input id="inputField" className="input input-bordered join-item md:w-80 text-black font-semibold" placeholder="Search here..." />
                                 </div>
                                 <div className="indicator">
-                                    <button className="btn join-item bg-[#FF444A] border-none text-white hover:bg-amber-500">Search</button>
+                                    <button onClick={handleSearch} className="btn join-item bg-[#FF444A] border-none text-white hover:bg-amber-500">Search</button>
                                 </div>
                             </div>
                         </div>
