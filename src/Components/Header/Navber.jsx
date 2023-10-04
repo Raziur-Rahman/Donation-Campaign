@@ -2,13 +2,22 @@ import { Link, NavLink } from "react-router-dom";
 
 
 const Navber = () => {
+
+    // Navber with dynamic route is implemented here
+
     return (
         <div >
             <nav className=" md:px-10 lg:px-8 xl:px-32 py-2">
                 <div className="flex flex-col md:flex-row justify-between items-center ">
+                    
+                    {/* NavBar logo */}
+                    
                     <div className="flex-1">
                         <Link to={'/'}><img src={'https://i.ibb.co/N9M0kxJ/Logo.png'} alt="" /></Link>
                     </div>
+
+                    {/* Dynamic links */}
+
                     <div className="flex gap-5 my-4 ">
                         <NavLink
                             to="/"

@@ -1,4 +1,4 @@
-// import { Link, NavLink } from "react-router-dom";
+
 
 import { useLoaderData } from "react-router-dom";
 import Bannar from "../../Components/Bannar/Bannar";
@@ -14,6 +14,7 @@ const Home = () => {
     const [showData, setShowData] = useState([]);
     const [found, setFound] =useState(true);
 
+    // Data loading and Search Functionality implemented here
     const data = useLoaderData();
 
     useEffect(()=>{
@@ -35,9 +36,7 @@ const Home = () => {
         }
     },[searchValue,data])
 
-
-    // console.log(searchValue);
-
+    // Conditional rendaring and Showing elements here
     return (
         <div>
             <SearchContext.Provider value={[searchValue, setSearchValue]}>

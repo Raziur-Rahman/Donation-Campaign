@@ -7,7 +7,6 @@ const MainLayout = () => {
         <div>
             <Navber></Navber>
             <Outlet></Outlet>
-            
         </div>
     );
 };

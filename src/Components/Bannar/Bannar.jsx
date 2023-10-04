@@ -4,6 +4,8 @@ import { SearchContext } from "../../Pages/Home/Home";
 
 const Bannar = () => {
 
+    //Search state and clicked event handle here
+    
     const [searchValue , setSearchValue] = useContext(SearchContext);
 
     const handleSearch = () => {
@@ -19,8 +21,7 @@ const Bannar = () => {
 
     }
 
-    // console.log(searchValue);
-
+    //Codes for creation of bannar and showing bannars information
 
     return (
         <div>

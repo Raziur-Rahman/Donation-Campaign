@@ -2,8 +2,10 @@
 
 const DonationCard = ({ data }) => {
 
+    // Destructuring data 
     const { Title, Category, CategoryBackground, Card_B_Bg, CategoryTextColor, Image, DonationAmount} = data;
 
+    //Codes for making Donation card and Showing information dynamically
 
     return (
         <div>

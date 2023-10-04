@@ -5,9 +5,10 @@ const HomeCard = ({ data }) => {
 
     const {ID, Image, Category, Title, CategoryBackground, Card_B_Bg, CategoryTextColor } = data;
 
-
+    //Codes for showing Home card content
     return (
         <div >
+            {/* Cards clicking events manage with dynamic routing */}
             <Link to={`/details/${ID}`}>
                 <div className="rounded-md w-fit" style={{ backgroundColor: CategoryBackground }}>
                     <figure><img src={Image[0]} alt="Image..." /></figure>

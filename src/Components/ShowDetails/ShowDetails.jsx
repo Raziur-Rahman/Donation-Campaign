@@ -7,6 +7,7 @@ import swal from "sweetalert";
 const ShowDetails = () => {
     const [donationPosts, setDonationPosts] = useState([]);
 
+    // Loading data
     const DonationId = useParams();
     const data = useLoaderData();
 
@@ -17,8 +18,10 @@ const ShowDetails = () => {
 
     }, [DonationId.ID, data])
 
+    // destucturing the data
     const { ID, Description, Title, CategoryTextColor, DonationAmount } = donationPosts;
 
+    // button clicked event is managed here
     const handleClick = () => {
         const addDonationData = []
 
@@ -43,12 +46,13 @@ const ShowDetails = () => {
 
             }
         }
-        // console.log(clickeData);
     }
 
+    // Showing information here
     return (
         <div className=" p-3 lg:px-8 xl:px-32">
 
+            {/* Codes for Cover image with overlay and donate button */}
             <div className="relative rounded-md">
                 <img className="h-[500px] lg:h-fit w-screen" src={'https://i.ibb.co/rMFvKF6/Rectangle-4288.png'} alt="" />
 
@@ -56,6 +60,8 @@ const ShowDetails = () => {
                     <button onClick={handleClick} className="px-4 py-2 text-xl rounded-md text-white font-medium my-10 mx-10" style={{ backgroundColor: CategoryTextColor }}>Donate {DonationAmount}</button>
                 </div>
             </div>
+
+            {/* Heading and Description */}
             <div>
                 <h1 className="my-6 text-5xl font-bold text-black" >{Title}</h1>
                 <p className="text-xl">{Description}</p>
