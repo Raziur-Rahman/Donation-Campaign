@@ -3,11 +3,9 @@
 const Statistics = () => {
 
 
-
     return (
         <div>
-            Stats will show hare
-            
+            stats will apear here
         </div>
     );
 };

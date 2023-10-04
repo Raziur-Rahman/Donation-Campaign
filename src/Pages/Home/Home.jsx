@@ -47,7 +47,7 @@ const Home = () => {
                         found ? <div className="px-4 md:px-10 lg:px-5 xl:px-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center my-10">{
                             showData.map(data => <HomeCard key={data.ID} data={data}></HomeCard>)
                         }</div>
-                        : <p className="text-4xl flex justify-center items-center h-[20vh]">No data found for this Category</p>
+                        : <p className="text-4xl flex justify-center items-center font-semibold h-[20vh]">Opps! No data found for this Category...</p>
                     }
 
                 </div>
